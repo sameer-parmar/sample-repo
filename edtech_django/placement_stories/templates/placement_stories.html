@@ -1,0 +1,53 @@
+{% extends 'placement_stories/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+  <!-- Title Section -->
+  <div class="title-section">
+    <h2>Placement Stories</h2>
+    <p class="subtitle">"Learning Is Never Done Without Errors and Defeat"</p>
+  </div>
+
+  <!-- Placement Cards -->
+  {% for info in page_obj %}
+    <div class="placement-card">
+      <div class="card-content">
+        <img src="{{ info.user_profile_pic.url }}" alt="Profile Picture" class="profile-pic">
+        <div class="card-details">
+          <span class="company-badge">{{ info.company_name }} Intern</span>
+          <p class="description">{{ info.description }}</p>   
+          <a href="{% url 'story_detail' story_id=info.id %}" class="know-more-btn">Know more</a>
+
+          <p class="ctc">CTC={{ info.package }}/Per month</p>
+        </div>
+        <div class="student-info">
+          <p><strong>Name=</strong> {{ info.name }}</p>
+          <p><strong>Degree=</strong> {{ info.degree }}</p>
+          <p><strong>Branch=</strong> {{ info.branch }}</p>
+          <p><strong>Batch=</strong> {{ info.batch }}</p>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+
+  <!-- Load More Button -->
+  {% if page_obj.has_next %}
+    <div class="load-more-container">
+      <a href="?page={{ page_obj.next_page_number }}" class="know-more-btn">Load More</a>
+    </div>
+  {% endif %}
+
+  <!-- Admin Form for Superusers -->
+  {% if user.is_superuser and form %}
+    <div class="admin-form">
+      <h3>Add New Placement Story</h3>
+      <form method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="Submit-btn">Submit Story</button>
+      </form>
+    </div>
+  {% endif %}
+</div>
+{% endblock %}

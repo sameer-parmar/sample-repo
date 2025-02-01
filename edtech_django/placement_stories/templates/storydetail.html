@@ -1,0 +1,23 @@
+{% extends 'placement_stories/base.html' %}
+{% block content %}
+<div class="container">
+  <div class="title-section">
+    <h2>{{ story.company_name }} - Placement Story</h2>
+  </div>
+
+  <div class="placement-card">
+    <img src="{{ story.user_profile_pic.url }}" alt="Profile Picture" class="profile-pic">
+    <div class="card-details">
+      <p><strong>Name:</strong> {{ story.name }}</p>
+      <p><strong>Company:</strong> {{ story.company_name }}</p>
+      <img src = "{{story.hand_written_review.url}}" alt = "Hand Written Review" class = "hand_written_review">
+      <p><strong>Designation:</strong> {{ story.degination }}</p>
+      <p><strong>CTC:</strong> {{ story.package }}/Per month</p>
+      <p><strong>Degree:</strong> {{ story.degree }}</p>
+      <p><strong>Branch:</strong> {{ story.branch }}</p>
+      <p><strong>Batch:</strong> {{ story.batch }}</p>
+      <p><strong>Description:</strong> {{ story.description }}</p>
+    </div>
+  </div>
+</div>
+{% endblock %}

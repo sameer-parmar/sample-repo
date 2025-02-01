@@ -1,0 +1,258 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Header Styling */
+header {
+    padding: 30px 0;
+    text-align: center;
+}
+
+.logo h1 {
+    font-size: 36px;
+    color: #2c3e50;
+    margin: 0;
+}
+
+
+/* Title Section */
+.title-section {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.title-section h2 {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #7f8c8d;
+    font-style: italic;
+    font-size: 18px;
+}
+
+/* Placement Card Styling */
+.placement-card {
+    background:#ffffff;
+    border-color: #34393c;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+    padding: 25px;
+    margin-bottom: 30px;
+}
+
+.card-content {
+    display: flex;
+    gap: 25px;
+    align-items: flex-start;
+}
+
+.profile-pic {
+    margin-top: 40px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #b0cde1;
+}
+
+.card-details {
+    flex: 1;
+}
+
+.company-badge {
+    background: #3498db;
+    color: white;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.description {
+    font-size: 15px;
+    color: #444;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.read-more {
+    color: #3498db;
+    text-decoration: none;
+    font-size: 14px;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.student-info {
+    background: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    min-width: 200px;
+    margin-top: 40px;
+}
+
+.student-info p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #555;
+}
+/* Admin Form Styling */
+.admin-form {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    margin: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.admin-form h3 {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+}
+
+.admin-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.admin-form .form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.admin-form label {
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 0.95rem;
+}
+
+.admin-form input,
+.admin-form textarea,
+.admin-form select {
+    padding: 0.8rem;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    font-size: 1rem;
+    width: 100%;
+    transition: border-color 0.3s ease;
+}
+
+.admin-form input:focus,
+.admin-form textarea:focus {
+    outline: none;
+    border-color: #000000;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+/* Submit Button Styling */
+.Submit-btn {
+    background-color: #077bc3;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-top: 1rem;
+    
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.Submit-btn:hover {
+    background-color: orange;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+}
+
+.Submit-btn:active {
+    transform: translateY(0);
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* File Upload Custom Styling */
+.admin-form input[type="file"] {
+    padding: 0.5rem;
+    border: 2px dashed #3498db;
+    background: rgba(52, 152, 219, 0.05);
+}
+
+.admin-form input[type="file"]::file-selector-button {
+    background: #3498db;
+    color: rgb(0, 0, 0);
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    margin-right: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.admin-form input[type="file"]::file-selector-button:hover {
+    background: #2980b9;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .admin-form {
+        padding: 1.5rem;
+        margin: 1.5rem 0;
+    }
+    
+    .Submit-btn {
+        width: 100%;
+        padding: 12px 20px;
+    }
+}.know-more-btn {
+    background-color: #077bc3;
+    color: white;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: 15px;
+    transition: background 0.3s;
+    text-decoration: none; /* Removes underline */
+    display: inline-block;
+    text-align: center;
+}
+
+.know-more-btn:hover {
+    background: orange; 
+}
+
+
+.ctc {
+    
+    color: #262626;
+    font-size: 16px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
